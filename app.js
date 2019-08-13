@@ -76,6 +76,7 @@ for (var i = 0; i < 5; i++) {
 
   console.log(stores[i].randomCookHourly);
 }
+//Creating a print out of store list and prices.
 
 for (var k = 0; k < stores.length; k++) {
   var elListOne = document.getElementById ('storeList');
@@ -85,9 +86,24 @@ for (var k = 0; k < stores.length; k++) {
   newList.id = stores[k].name;
    
   for (var h = 0; h < alki.randomCookHourly.length; h++) {
-    var elListTwo = document.getElementById (stores[k].name);
-    var newListCookie = document.createElement ('ul');
-    newListCookie.textContent = stores[k].randomCook();
-    elListTwo.appendChild(newListCookie);
+    if (h + 6 < 12) {
+      var elListTwo = document.getElementById (stores[k].name);
+      var newListCookie = document.createElement ('ul');
+      newListCookie.textContent = h + 6 + 'am: ' + stores[k].randomCook();
+      elListTwo.appendChild(newListCookie);
+    }
+    else if (h + 6 > 12) {
+      elListTwo = document.getElementById (stores[k].name);
+      newListCookie = document.createElement ('ul');
+      newListCookie.textContent = h - 6 + 'pm: ' + stores[k].randomCook();
+      elListTwo.appendChild(newListCookie);
+    }
+    else if (h === 12) {
+      elListTwo = document.getElementById (stores[k].name);
+      newListCookie = document.createElement ('ul');
+      newListCookie.textContent = '12pm: ' + stores[k].randomCook();
+      elListTwo.appendChild(newListCookie);
+
+    }
   }
 }
