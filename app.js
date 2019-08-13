@@ -10,18 +10,18 @@ function Stores(whichPlace, minCust, maxCust, averageCook) {
   this.dailyCook = 0;
   places.push(this);
 
-  this.custCalc = function() {
+  this.cookCount = function() {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
   };
 
-  this.calcHourlySales = function() {
+  this.hourlySales = function() {
     for (var i = 0; i < hours.length; i++) {
-      this.hourlyCook.push(Math.floor(this.averageCook * this.custCalc()));
+      this.hourlyCook.push(Math.floor(this.averageCook * this.cookCount()));
       this.dailyCook += this.hourlyCook[i];
     }
   };
-  this.prinOut = function() {
-    this.calcHourlySales();
+  this.printOut = function() {
+    this.hourlySales();
 
     var row = document.createElement('tr');
     var place = document.createElement('th');
@@ -47,20 +47,18 @@ var seattleCenter = new Stores('Seattle Center', 11, 38, 4.7);
 var capitolHill = new Stores('Capitol Hill', 23, 65, 6.3);
 var alki = new Stores('Alki', 2, 16, 4.6);
 
+var elTable = document.getElementById ('saleTable');
+
 
 var andChairs = document.createElement('table');
 var headerRow = document.createElement('thead');
+elTable.appendChild(andChairs);
 
 var emptyCell = document.createElement('td');
-emptyCell.setAttribute('class', 'empty');
 headerRow.appendChild(emptyCell);
 
 for (var i = 0; i < hours.length; i++) {
   var td = document.createElement('td');
-
-  td.setAttribute('class', 'cell');
-  td.setAttribute('class', 'hours');
-
   td.innerHTML = hours[i]; //Source: https://www.w3schools.com/js/js_htmldom_html.asp
   headerRow.appendChild(td);
 };
@@ -74,7 +72,7 @@ andChairs.appendChild(headerRow);
 
 function printOutPlaces(){
   for (var i = 0; i < places.length; i++) {
-    places[i].prinOut();
+    places[i].printOut();
   }
 }
 printOutPlaces();
