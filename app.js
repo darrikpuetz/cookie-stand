@@ -76,6 +76,7 @@ for (var i = 0; i < 5; i++) {
 
   console.log(stores[i].randomCookHourly);
 }
+//Creating a print out of store list and prices.
 
 for (var k = 0; k < stores.length; k++) {
   var elListOne = document.getElementById ('storeList');
