@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Darrik's Site</title>
+        <title>Pat's Shop</title>
         <link rel="stylesheet" type="text/css" href="css/reset.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         
@@ -22,11 +22,48 @@
                 <div class="HolyGrail-body">
                   <main class="HolyGrail-content">
                       
-                      <div class="hero">Sam's Salmon Cookies</div>
+                      <div class="hero">Pat's Salmon Cookies</div>
                     </p>
                     <p align="center">
                     <strong>Get Your Num Nums! </strong>
                    </p>
+                   <form id='sample_form'>
+                     <fieldset>
+                       <label for= 'favstore'>Vote on your favorite store!</label>
+                       <input type='text' name= 'store goes here'
+                       placeholder='store goes here' minlength='3'
+                       required>
+                     </fieldset>
+                     <fieldset>
+                      <label for= 'newmerch'>Go ideas on new merch?!</label>
+                      <input type='text' name= 'type ideas here'
+                      placeholder='enter first name' minlength='3'
+                      required>
+                    </fieldset>
+                    <fieldset>
+                      <label for= 'feedback'>Give us your opinion on our stores.</label>
+                      <input type='text' name= 'feedback goes here'
+                      placeholder='enter first name' minlength='3'
+                      required>
+                    </fieldset>
+                    <fieldset>
+                      <label for='future_classes'>interested in taking future classes?</label>
+                      <input type='radio' name= 'feedback goes here'
+                      value='sure'>yes
+                      <input type='radio' name= 'feedback goes here'
+                      value='nope'>no
+                    </fieldset>
+                    <button id='submit_btn' type='submit'>add student</button> 
+                   </form>
+
+                   <table>
+                     <thead>
+                       <th> first name</th>
+                       <th>last name</th>
+                       <th>enrolled</th>
+                     </thead>
+                     <tbody id='student_table'></tbody>
+                   </table>
 
                     <p id = 'saleTable'>
                         </p>
@@ -35,6 +72,7 @@
                       <h2>Merch<br/><br/></h2>
                       <ol-ad>
                           <li><a href='https://www.rottentomatoes.com/m/friday_night_lights'>Salmon Slides</a></li>
+                          <button type="button">Get Your Merch!</button>
                       </ol-ad>
                   </aside>
                 </div>
