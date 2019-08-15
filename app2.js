@@ -51,14 +51,19 @@ var elTable = document.getElementById ('saleTable');
 
 
 var andChairs = document.createElement('table');
+console.log(andChairs);
 var headerRow = document.createElement('thead');
 
 
 var emptyCell = document.createElement('td');
+emptyCell.setAttribute('class', 'empty');
+headerRow.appendChild(emptyCell)
 headerRow.appendChild(emptyCell);
 
 for (var i = 0; i < hours.length; i++) {
   var td = document.createElement('td');
+  td.setAttribute('class', 'cell');
+  td.setAttribute('class', 'hours');
   td.innerHTML = hours[i]; //Source: https://www.w3schools.com/js/js_htmldom_html.asp
   headerRow.appendChild(td);
 };
@@ -82,70 +87,21 @@ var newStore = document.getElementById('newStoreAdded')
 var eventForm = function(event) {
   event.preventDefault();
 
-var place = event.target.place.value;
-var minimum = event.target.minimum.value;
-var maximum = event.target.maximim.value;
-var average = event.target.average.value;
+  var place = event.target.places.value;
+  var minimum = event.target.minimum.value;
+  var max = event.target.max.value;
+  var average = Number(event.target.average.value);
 
-var newStoreAdded = new Stores(places, minimum, maximum, average);
+  var newStoreAdded = new Stores(place, minimum, max, average);
 
-places.push(newStoreAdded);
-newStore.printOut();
+  event.target.places.value = null;
+  event.target.minimum.value = null;
+  event.target.max.value = null;
+  event.target.average.value = null;
+
+  places.push(newStoreAdded);
+  newStoreAdded.printOut();
 
 };
 
 newStore.addEventListener('submit', eventForm);
-
-// var form = document.getElementById('newstore');
-// var Event = function(formEvent) {
-//   formEvent.preventDefault();
-
-//   if(event.target.location.value) {
-//     return 
-// }
-
-// var store = event.target.store.value;
-// var minCook = event.target.minCook.value;
-// var maxCook = event.target.maxCook.value;
-// var avgCook = event.target.avgCook.value;
-
-
-
-// var form = document.getElementById('sample_form');
-// var table = document.getElementById('student_table');
-// var data = []
-
-// function UserFeedback(first, last, status, future, plans) {
-//   this.first = first;
-//   this.last = last;
-//   this.enrolled = status;
-//   this.future_classes = plans;
-// }
-
-// function formData(event) {
-//   event.preventDefault();
-
-//   var first = event.target.first.value;
-//   var last = event.target.last.value;
-//   var enrolled = event.target.enrolled.checked;
-//   var futureClasses = event.target.future_classes.value;
-  
-//   data.push(new UserFeedback(first, last, enrolled, futureClasses));
-
-//   createTable();
-//   form.reset();
-//   console.log('History of data');
-// }
-
-// function createTable() {
-//   var row;
-
-//   for ( var i = 0; i < data.length; i++) {
-//     row = document.createElement('tr');
-//     row.innerHTML = '<td>' + data[i].first +'</td>' + '<td>' + data[i].last + '</td>' + '<td>' + data[i].enrolled + '</td>' + '<td>' + data[i].futureClasses + '</td>';
-//   }
-
-//   table.appendChild(row);
-
-//   form.addEventListener('submit', formData);
-// }
