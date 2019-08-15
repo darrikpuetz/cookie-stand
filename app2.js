@@ -78,6 +78,24 @@ function printOutPlaces(){
 printOutPlaces();
 elTable.appendChild(andChairs);
 
+var newStore = document.getElementById('newStoreAdded')
+var eventForm = function(event) {
+  event.preventDefault();
+
+var place = event.target.place.value;
+var minimum = event.target.minimum.value;
+var maximum = event.target.maximim.value;
+var average = event.target.average.value;
+
+var newStoreAdded = new Stores(places, minimum, maximum, average);
+
+places.push(newStoreAdded);
+newStore.printOut();
+
+};
+
+newStore.addEventListener('submit', eventForm);
+
 // var form = document.getElementById('newstore');
 // var Event = function(formEvent) {
 //   formEvent.preventDefault();
