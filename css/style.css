@@ -1,0 +1,252 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: helvetica;
+    background-color: #9E2A2B;
+}
+ ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #540B0E;
+    border-radius: 25px 25x 25px 25px;
+    position: fixed
+   
+   
+  }
+  
+li {
+    float: left;
+    list-style-type: none;
+    height: 56px;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 18px;
+    text-decoration: none;
+    border-radius: 25px;
+    
+  }
+
+  .active {
+    background-color: ivory;
+  }
+
+  li a:hover {
+    background-color: #E09F3E;
+    border-radius: 25px 25x 25px 25px;
+  }
+
+header{
+    background-color: #540B0E;
+    height: 60px;
+    position: fixed;
+    width: 100%
+}
+
+h1{
+    text-size-adjust: 2.5em;
+    float: left;
+    margin-left: 20px;
+    margin-right: 50px;
+    color: ivory;
+    text-shadow: 1px 1px 1px 1px #9E2A2B;
+}
+main{
+    width: 1000px;
+    min-height: 700px;
+    margin: 5px auto;
+    background-color: #E09F3E;
+    
+}
+    
+main li:last-child{
+    margin-right: 0;
+}
+footer{
+    height: 60px;
+    background: #335C67
+}
+p{
+    padding: 10px 10px 10px 10px;
+    margin: 10px;
+    border: 20px;
+    text-align: center
+}
+
+div.ex1 {
+  overflow: scroll;
+}
+
+.HolyGrail {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.HolyGrail-body {
+  display: flex;
+  flex: 1;
+}
+
+.HolyGrail-content {
+  flex: 1;
+}
+
+ .HolyGrail-ads {
+  flex: 0 0 12em;
+  padding: 50px 12px 12px 12px;
+  margin: 20px;
+  color: white;
+  width: 3em;
+  text-align: center;
+}
+.HolyGrail-ads > li {
+  text-align: center
+}
+
+.HolyGrail,
+.HolyGrail-body {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (min-width: 768px) {
+  .HolyGrail-body {
+    flex-direction: row;
+    flex: 1;
+  }
+  .HolyGrail-content {
+    flex: 1;
+  }
+   .HolyGrail-ads {
+    flex: 0 0 12em;
+  }
+}
+.hero {
+  font-size: 5rem;
+  color:black; 
+  text-shadow: -1px -1px 0 ivory, 1px -1px 0 ivory, -1px 1px 0 ivory, 1px 1px 0 ivory;
+  text-transform: uppercase;
+  horizontal-align: center; 
+  text-align: center;
+  letter-spacing: .45rem;
+  font-weight: 700;
+  width: 100%;
+  height: 240px;
+  margin: 0 auto;
+  line-height: 20rem;
+  background: #000000 url('http://images.dailykos.com/images/319612/large/male_chinook_salmon_-_spawning_colors.jpg?1477841056');
+  background-repeat: no-repeat;
+  background-size: 100%; 
+  /* picture source from pixbay.com */
+  opacity: 90%;
+};
+
+ol-ad {
+  text-align: center;
+}
+
+.element {
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+table {
+  border: 10px solid black;
+}
+ 
+th {
+  height: 10px;
+  width: 200px;
+}
+
+td {
+  height: 50px;
+  width: 200px;
+  padding: 5px;
+}
+#saleTable {
+
+  background: #540B0E;
+  color: ivory;
+}
+
+#newStoreAdded {
+  text-align: left
+}
+
+#salmonslides {
+  border-radius: 25px 25x 25px 25px;
+}
+
+img{
+    float: left;
+    margin-right: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 25%;
+    
+}
+
+main li:last-child{
+    margin-right: 0;
+}
+
+ul#b {
+  height:400px;
+}
+
+li#b {
+height: 200px;
+}
+fieldset {
+  text-align: center;
+}
+
+button#merch {
+  height: 75px;
+  width: 75px;
+  margin: 50px;
+}
+
+p#family {
+  color: black;
+}
+
+#family {
+  text-align: center;
+  text-size-adjust: 20px;
+  float: left;
+}
+
+#familyp {
+  margin-top: 30px;
+  padding-top: 30px;
+}
+
+#familyh {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 20px;
+  font-size: 30px;
+  line-height: 40px;
+  color: #000;
+  font-weight: 300;
+}
+
+#salmonpng {
+  float: right;
+}
+
+/* Hero css properties https://codepen.io/macbubb/pen/qLJbJb */
+/* Header Image Source: https://www.flickr.com/photos/drdad/4903779499
+
