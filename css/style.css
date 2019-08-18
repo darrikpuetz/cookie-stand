@@ -86,6 +86,7 @@ div.ex1 {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  font-family: 'Merriweather', serif;
 }
 
 .HolyGrail-body {
@@ -104,6 +105,7 @@ div.ex1 {
   color: white;
   width: 3em;
   text-align: center;
+  overflow: visible;
 }
 .HolyGrail-ads > li {
   text-align: center
@@ -186,6 +188,7 @@ td {
 
 #salmonslides {
   border-radius: 25px 25x 25px 25px;
+  align-content: center;
 }
 
 img{
@@ -247,6 +250,10 @@ p#family {
   float: right;
 }
 
+#merch {
+  font-size: 4em;
+  text-align: center;
+}
 /* Hero css properties https://codepen.io/macbubb/pen/qLJbJb */
 /* Header Image Source: https://www.flickr.com/photos/drdad/4903779499
 
